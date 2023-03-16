@@ -24,9 +24,22 @@
                             <label for="" class="form-label">Nombre</label>
                                 <input  type="text"class="form-control" name="nombre" value="<?php echo $gestor->getNombre()?>">
                         </div>
-                        <div class="mb-3">
+                        <div>
                             <label for="" class="form-label">Tipo Usuario</label>
-                            <input type="text"class="form-control" name="tipo_usuario" value="<?php echo $gestor->getTipo_usuario()?>">
+                            <select name="tipo_usuario" class="form-select">
+                            <?php if ($gestor->getTipo_usuario()=="administrador") {?>
+                                    
+                                    <option value="administrador" selected>administrador</option>
+                                    <option value="gestor">gestor</option>
+                                <?php }
+                                ?>
+                            <?php if ($gestor->getTipo_usuario()=="gestor") {?>
+                                    
+                                    <option value="administrador" >administrador</option>
+                                    <option value="gestor" selected>gestor</option>
+                                <?php }
+                                ?>
+                            </select>
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Usuario</label>
