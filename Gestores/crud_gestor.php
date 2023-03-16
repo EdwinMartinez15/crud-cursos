@@ -4,8 +4,9 @@
         public function __construct(){}
         public function insertar($gestor){
             $db=Db::conectar();
-            $insert=$db->prepare('INSERT INTO gestores values(NULL,:nombre,:tipo_usuario,:clave)');
+            $insert=$db->prepare('INSERT INTO gestores values(NULL,:nombre,:tipo_usuario,:usuario,:clave)');
             $insert->bindValue('nombre',$gestor->getNombre());
+            $insert->bindValue('usuario',$gestor->getUsuario());
             $insert->bindValue('tipo_usuario',$gestor->getTipo_usuario());
             $insert->bindValue('clave',$gestor->getClave());
             $insert->execute();
