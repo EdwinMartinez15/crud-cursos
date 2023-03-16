@@ -1,5 +1,5 @@
 <?php
-    class Usuario{
+    class Curso{
         private $id;
         private $nombres;
         private $codigo;
