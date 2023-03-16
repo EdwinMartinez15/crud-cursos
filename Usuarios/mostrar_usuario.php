@@ -9,6 +9,11 @@
     $crudG=new CrudGestor();
     $gestor=new Gestor();
     $listaGestores=$crudG->mostrar();
+    require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Cursos/crud_curso.php');
+    require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Cursos/curso.php');
+    $crudC=new CrudCurso();
+    $curso=new Curso();
+    $listaCursos=$crudC->mostrar();
     include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/cabeza_usuario.php')
 ?>
 <div class="container">
@@ -18,11 +23,11 @@
                 <div class="card-header">
                     Tabla Usuarios
                 </div>
-                <div>
+                <!-- <div>
                     <?php  
                         var_dump($listaGestores); 
                     ?>
-                </div>
+                </div> -->
                 <div class="card-body">
                     <table class="table text-center">
                         <thead>
@@ -49,8 +54,8 @@
                                 <td><?php echo $usuario->getCelular() ?></td>
                                 <td><?php echo $usuario->getCiudad() ?></td>
                                 <td><?php 
-                                    foreach ($listaGestores as $gestor) {?>
-                                        <?php if($usuario->getCurso_id()==$gestor->getId()){echo $gestor->getNombre();} ?>
+                                    foreach ($listaCursos as $curso) {?>
+                                        <?php if($usuario->getCurso_id()==$curso->getId()){echo $curso->getNombre();} ?>
                                     <?php }?>
                                 </td>
                                 <td><?php 
