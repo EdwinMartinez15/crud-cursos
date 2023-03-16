@@ -10,6 +10,11 @@
     $crudG=new CrudGestor();
     $gestor=new Gestor();
     $listaGestores=$crudG->mostrar();
+    require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Cursos/crud_curso.php');
+    require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Cursos/curso.php');
+    $crudC=new CrudCurso();
+    $curso=new Curso();
+    $listaCursos=$crudC->mostrar();
     include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/cabeza_usuario.php');
 ?>
 <div class="container">
@@ -54,10 +59,32 @@
                                 <input type="text"class="form-control" name="curso_id" value="<?php echo $usuario->getCurso_id()?>">
                         </div>
                         <div class="mb-3">
+                            <label for="" class="form-label">Curso</label>
+                                <select type="text"class="form-select" name="curso_id" value="<?php echo $usuario->getCurso_id()?>">
+                                <?php foreach ($listaCursos as $curso) {?>
+                                    <?php if ($curso->getId()==$usuario->getCurso_id()) {?>
+                                        <option selected value=<?php echo $curso->getId() ?>> <?php echo $curso->getNombre() ?></option>
+                                    <?php }
+                                    ?>
+                                    <?php if ($curso->getId()!=$usuario->getCurso_id()) {?>
+                                        <option value=<?php echo $curso->getId() ?>> <?php echo $curso->getNombre() ?></option>
+                                    <?php }
+                                    ?>
+                                <?php }?>   
+                                </select>
+                        </div>
+                        <div class="mb-3">
                             <label for="" class="form-label">Gestor</label>
                                 <select type="text"class="form-select" name="gestor_id" value="<?php echo $usuario->getGestor_id()?>">
                                 <?php foreach ($listaGestores as $gestor) {?>
-                                    <option value=<?php echo $gestor->getId() ?>> <?php echo $gestor->getNombre() ?></option>
+                                    <?php if ($gestor->getId()==$usuario->getGestor_id()) {?>
+                                        <option selected value=<?php echo $gestor->getId() ?>> <?php echo $gestor->getNombre() ?></option>
+                                    <?php }
+                                    ?>
+                                    <?php if ($gestor->getId()!=$usuario->getGestor_id()) {?>
+                                        <option value=<?php echo $gestor->getId() ?>> <?php echo $gestor->getNombre() ?></option>
+                                    <?php }
+                                    ?>
                                 <?php }?>   
                                 </select>
                         </div>
