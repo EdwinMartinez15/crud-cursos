@@ -13,7 +13,7 @@
                     <div class="btn-group">
                         <a href="/crud-cursos/Usuarios/mostrar_usuario.php" class="btn btn-primary">Usuario</a>
                         <a href="/crud-cursos/Gestores/mostrar_gestor.php" class="btn btn-primary">Gestor</a>
-                        <a href="/crud-cursos/Autores/mostrar_autor.php" class="btn btn-primary">Autor</a>
+                        <a href="/crud-cursos/Cursos/mostrar_curso.php" class="btn btn-primary">Curso</a>
                     </div>
                     
                 </div>
