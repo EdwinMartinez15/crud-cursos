@@ -55,5 +55,14 @@
             $actualizar->bindValue('clave',$gestor->getClave());
             $actualizar->execute();
         }
+        public function seleccionGC($usuario){
+            $db=DB::conectar();
+            $select=$db->prepare('SELECT * FROM gestores WHERE usuario=:usuario');
+            $select->bindValue('usuario',$usuario);
+            $select->execute();
+            $gestor=$select->fetch();
+            return $gestor;
+
+        }
     }
 ?>
