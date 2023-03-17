@@ -43,15 +43,7 @@
                             <label for="" class="form-label">Curso</label>
                                 <input type="text"class="form-control" name="curso_id">
                         </div>
-                        <div class="mb-3">
-                            <label for="" class="form-label">Gestor</label>
-                                <select type="text"class="form-select" name="gestor_id">
-                                    <option disabled selected>----</option>
-                                <?php foreach ($listaUsuarios as $usuario) {?>
-                                    <option value=<?php echo $usuario->getId() ?>> <?php echo $usuario->getNombres() ?></option>
-                                <?php }?>   
-                                </select>
-                        </div>
+                        
                         <input type="hidden" name="insertar" value="insertar">
                         <input type="submit" value="Guardar" class="btn btn-success">
                     </form>
