@@ -10,7 +10,18 @@
 
     if (isset($_POST['iniciar'])) {
         if ($gestor['clave']==$_POST['clave']) {
-            header('Location: /crud-cursos/index.php');
+            switch ($gestor['tipo_usuario']) {
+                case 'administrador':
+                    header('Location: /crud-cursos/Templates/PantallaAdministrador.php');
+                    break;
+                case 'gestor':
+                    header('Location: /crud-cursos/Templates/PantallaGestor.php');
+                    break;
+                
+                default:
+                    header('Location: /crud-cursos/index.php');
+                    break;
+            }
         }
         else {
             header('Location: /crud-cursos/Cursos/mostrar_curso.php');
