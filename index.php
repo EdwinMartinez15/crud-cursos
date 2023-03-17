@@ -11,9 +11,8 @@
                 </div>
                 <div class="row row-cols-2 justify-content-md-center">
                     <div class="btn-group">
-                        <a href="/crud-cursos/Usuarios/mostrar_usuario.php" class="btn btn-primary">Usuario</a>
-                        <a href="/crud-cursos/Gestores/mostrar_gestor.php" class="btn btn-primary">Gestor</a>
-                        <a href="/crud-cursos/Cursos/mostrar_curso.php" class="btn btn-primary">Curso</a>
+                        <a href="/crud-cursos/Login/login.php" class="btn btn-primary">Iniciar sesión</a>
+                        <a href="/crud-cursos/Usuarios/mostrar_usuario.php" class="btn btn-primary">Ingresar datos</a>
                     </div>
                     
                 </div>
