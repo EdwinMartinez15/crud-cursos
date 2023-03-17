@@ -5,18 +5,14 @@
     </head>
     <body>
             <header>
-                <div class="btn-toolbar justify-content-between">
+                <div class="btn-toolbar justify-content-end">
                     <table>
                     <tr>
                         <td>
-                            <a href="/crud-cursos/Usuarios/ingresar_usuario.php" class="btn btn-primary">Ingresar Usuario</a>
-                        </td>
-                        <td>
-                            <a href="/crud-cursos/Usuarios/mostrar_usuario.php" class="btn btn-primary">Ver Usuario</a>
+                            <a href="/crud-cursos/index.php" class="btn btn-info">Volver al inicio</a>
                         </td>
                     </tr>
                 </table>
-                <a href="/crud-cursos/index.php" class="btn btn-info">Volver al inicio</a>
             </header>
         </div>
         <main>

@@ -1,4 +1,10 @@
 <?php
+    session_start();
+    $tipo=$_SESSION['Tipo'];
+    if($tipo!='administrador'){
+        echo 'No tiene permiso';
+        die();
+    }
     require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Gestores/crud_gestor.php');
     require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Gestores/gestor.php');
     $crudG=new CrudGestor();
@@ -6,7 +12,7 @@
     $listaGestores=$crudG->mostrar();
     include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/cabeza_gestor.php');
 ?>
-<div class="container">
+<div class="container position-fixed top-50 start-50 translate-middle w-50 p-3">
     <div class="row justify-content-center align-items-center g-2">
         <div class="col-md-12">
             <div class="card">

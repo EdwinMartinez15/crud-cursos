@@ -48,10 +48,11 @@
         }
         public function actualizar($gestor){
             $db=DB::conectar();
-            $actualizar=$db->prepare('UPDATE gestores SET nombre=:nombre,tipo_usuario=:tipo_usuario,clave=:clave WHERE id=:id');
+            $actualizar=$db->prepare('UPDATE gestores SET nombre=:nombre,tipo_usuario=:tipo_usuario,usuario=:usuario,clave=:clave WHERE id=:id');
             $actualizar->bindValue('id',$gestor->getId());
             $actualizar->bindValue('nombre',$gestor->getNombre());
             $actualizar->bindValue('tipo_usuario',$gestor->getTipo_usuario());
+            $actualizar->bindValue('usuario',$gestor->getUsuario());
             $actualizar->bindValue('clave',$gestor->getClave());
             $actualizar->execute();
         }

@@ -6,13 +6,16 @@
     <body>
         <div class="container position-fixed top-50 start-50 translate-middle fs-1">
             <div class="row justify-content-md-center">
-                <div class="col col-lg-3 fs-1">
-                    CRUD CURSOS
+                <div class="col col-lg-3 fs-1" >
+                    <div class="text-center">
+
+                        BIENVENIDO A ESTA APLICACIÓN
+                    </div>
                 </div>
                 <div class="row row-cols-2 justify-content-md-center">
                     <div class="btn-group">
+                        <a href="/crud-cursos/Usuarios/ingresar_usuario.php" class="btn btn-primary">Ingresar datos del usuario</a>
                         <a href="/crud-cursos/Login/login.php" class="btn btn-primary">Iniciar sesión</a>
-                        <a href="/crud-cursos/Usuarios/mostrar_usuario.php" class="btn btn-primary">Ingresar datos</a>
                     </div>
                     
                 </div>

@@ -1,4 +1,7 @@
 <?php
+    session_start();
+    $tipo=$_SESSION['Tipo'];
+    $id=$_SESSION['Id'];
     require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Usuarios/crud_usuario.php');
     require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Usuarios/usuario.php');
     $crud=new CrudUsuario();
@@ -15,9 +18,9 @@
     $crudC=new CrudCurso();
     $curso=new Curso();
     $listaCursos=$crudC->mostrar();
-    include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/cabeza_usuario.php');
+    include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/cabeza_administrador.php');
 ?>
-<div class="container">
+<div class="container-sm position-fixedtranslate-middle w-50 p-3">
     <div class="row justify-content-center align-items-center g-2">
         <div class="col-md-12">
             <div class="card">
@@ -56,10 +59,6 @@
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Curso</label>
-                                <input type="text"class="form-control" name="curso_id" value="<?php echo $usuario->getCurso_id()?>">
-                        </div>
-                        <div class="mb-3">
-                            <label for="" class="form-label">Curso</label>
                                 <select type="text"class="form-select" name="curso_id" value="<?php echo $usuario->getCurso_id()?>">
                                 <?php foreach ($listaCursos as $curso) {?>
                                     <?php if ($curso->getId()==$usuario->getCurso_id()) {?>
@@ -74,18 +73,27 @@
                                 </select>
                         </div>
                         <div class="mb-3">
-                            <label for="" class="form-label">Gestor</label>
-                                <select type="text"class="form-select" name="gestor_id" value="<?php echo $usuario->getGestor_id()?>">
-                                <?php foreach ($listaGestores as $gestor) {?>
-                                    <?php if ($gestor->getId()==$usuario->getGestor_id()) {?>
-                                        <option selected value=<?php echo $gestor->getId() ?>> <?php echo $gestor->getNombre() ?></option>
-                                    <?php }
-                                    ?>
-                                    <?php if ($gestor->getId()!=$usuario->getGestor_id()) {?>
-                                        <option value=<?php echo $gestor->getId() ?>> <?php echo $gestor->getNombre() ?></option>
-                                    <?php }
-                                    ?>
-                                <?php }?>   
+                            <?php if ($tipo=='gestor') {?>
+                                <label hidden for="" class="form-label">Gestor</label>
+                                <select hidden type="text"class="form-select" name="gestor_id" value="<?php echo $usuario->getGestor_id()?>">
+                                    <?php }?>
+                                    <?php if ($tipo=='administrador') {?>
+                                        <label for="" class="form-label">Gestor</label>
+                                    <select type="text"class="form-select" name="gestor_id" value="<?php echo $usuario->getGestor_id()?>">
+                                <?php }?>
+                                    <?php if ($usuario->getGestor_id()==NULL) {?>
+                                        <option selected value="" disabled>Seleccione un gestor</option>
+                                    <?php }?>
+                                    <?php foreach ($listaGestores as $gestor) {?>
+                                        <?php if ($gestor->getTipo_usuario()=='gestor'){?>
+                                            <?php if ($gestor->getId()==$usuario->getGestor_id()) {?>
+                                                <option selected value=<?php echo $gestor->getId() ?>> <?php echo $gestor->getNombre() ?></option>
+                                            <?php }?>
+                                            <?php if ($gestor->getId()!=$usuario->getGestor_id()) {?>
+                                                <option value=<?php echo $gestor->getId() ?>> <?php echo $gestor->getNombre() ?></option>
+                                            <?php }?>
+                                        <?php }?> 
+                                    <?php }?>   
                                 </select>
                         </div>
                         <input type="hidden" name="actualizar" value="actualizar">

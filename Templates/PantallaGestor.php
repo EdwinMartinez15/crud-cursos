@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    $tipo=$_SESSION['Tipo'];
+    if($tipo!='gestor'){
+        echo 'No tiene permiso';
+        die();
+    }
+?>
 <html>
     <head>
         <title>Administrar Libro</title>

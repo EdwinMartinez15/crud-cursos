@@ -4,9 +4,14 @@
     $crud=new CrudUsuario();
     $usuario=new Usuario();
     $listaUsuarios=$crud->mostrar();
+    require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Cursos/crud_curso.php');
+    require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Cursos/curso.php');
+    $crudC=new CrudCurso();
+    $curso=new Curso();
+    $listaCursos=$crudC->mostrar();
     include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/cabeza_usuario.php')
 ?>
-<div class="container">
+<div class="container position-fixed top-50 start-50 translate-middle w-50 p-3">
     <div class="row justify-content-center align-items-center g-2">
         <div class="col-md-12">
             <div class="card">
@@ -41,7 +46,13 @@
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Curso</label>
-                                <input type="text"class="form-control" name="curso_id">
+                                <select type="text"class="form-select" name="curso_id" value="<?php echo $usuario->getCurso_id()?>">
+                                    <option value="" disabled selected>Seleccione su curso</option>
+                                <?php foreach ($listaCursos as $curso) {?>
+                                        <option value=<?php echo $curso->getId() ?>> <?php echo $curso->getNombre() ?></option>
+                                    ?>
+                                <?php }?>   
+                                </select>
                         </div>
                         
                         <input type="hidden" name="insertar" value="insertar">

@@ -16,7 +16,7 @@
         $usuario->setCurso_id($_POST['curso_id']);
         $usuario->setGestor_id($_POST['gestor_id']);
         $crud->insertar($usuario);
-        header('Location: /crud-cursos/Usuarios/mostrar_usuario.php');
+        header('Location: /crud-cursos/index.php');
     }elseif (isset($_POST['actualizar'])) {
         $usuario->setId($_POST['id']);
         $usuario->setNombres($_POST['nombres']);

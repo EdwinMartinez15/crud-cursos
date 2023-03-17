@@ -1,4 +1,10 @@
 <?php
+    session_start();
+    $tipo=$_SESSION['Tipo'];
+    if($tipo!='administrador'){
+        echo 'No tiene permiso';
+        die();
+    }
     require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Gestores/crud_gestor.php');
     require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Gestores/gestor.php');
     $crud=new CrudGestor();
@@ -6,21 +12,15 @@
     $listaGestores=$crud->mostrar();
     include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/cabeza_administrador.php')
 ?>
-<div class="container">
+<div class="container position-fixed top-50 start-50 translate-middle w-auto p-3">
     <div class="row justify-content-center align-items-center g-2">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header text-center">
                     Tabla Gestores
                     <?php echo $_GET['id']?>
                 </div>
-                <!-- <div>
-                    <?php  
-                        var_dump($listaGestores);
-                        //print_r(array_chunk($listaGestores, 2));  
-                    ?>
-                </div> -->
-                <div class="card-body">
+                <div class="card-body ">
                     <table class="table text-center">
                         <thead>
                             <th>Id</th>
@@ -46,7 +46,8 @@
                         </body>
                     </table>
                 </div>
-                <div class="card-footer text-muted">
+                <div class="card-footer text-end">
+                    <a href="/crud-cursos/Gestores/ingresar_gestor.php" class="btn btn-primary ">Ingresar</a>
                 </div>
             </div>
         </div>

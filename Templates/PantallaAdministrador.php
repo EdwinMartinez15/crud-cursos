@@ -1,6 +1,17 @@
+<?php
+    session_start();
+    $tipo=$_SESSION['Tipo'];
+    $id=$_SESSION['Id'];
+    $nombre=$_SESSION['Nombre'];
+    if($tipo!='administrador'){
+        echo 'No tiene permiso';
+        die();
+    }
+?>
+
 <html>
     <head>
-        <title>Administrar Libro</title>
+        <title>Administrar</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <div class="position-absolute top-0 end-0">
                     <table>
