@@ -4,7 +4,7 @@
     $crud=new CrudGestor();
     $gestor=new Gestor();
     $listaGestores=$crud->mostrar();
-    include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/cabeza_gestor.php')
+    include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/cabeza_administrador.php')
 ?>
 <div class="container">
     <div class="row justify-content-center align-items-center g-2">
@@ -12,13 +12,14 @@
             <div class="card">
                 <div class="card-header">
                     Tabla Gestores
+                    <?php echo $_GET['id']?>
                 </div>
-                <div>
+                <!-- <div>
                     <?php  
                         var_dump($listaGestores);
                         //print_r(array_chunk($listaGestores, 2));  
                     ?>
-                </div>
+                </div> -->
                 <div class="card-body">
                     <table class="table text-center">
                         <thead>

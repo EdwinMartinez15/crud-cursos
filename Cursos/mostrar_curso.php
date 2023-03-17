@@ -4,7 +4,7 @@
     $crud=new CrudCurso();
     $curso=new Curso();
     $listaCursos=$crud->mostrar();
-    include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/cabeza_curso.php')
+    include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/cabeza_administrador.php')
 ?>
 <div class="container">
     <div class="row justify-content-center align-items-center g-2">
