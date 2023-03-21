@@ -18,7 +18,7 @@
     $crudC=new CrudCurso();
     $curso=new Curso();
     $listaCursos=$crudC->mostrar();
-    include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/cabeza_administrador.php')
+    include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Templates/Cabezas/cabeza_administrador.php')
 
 ?>
 <div class="scrolling-wrapper position-fixed top-50 start-50 translate-middle w-auto p-3">
@@ -123,5 +123,5 @@
 
 
     <?php
-    include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/cola.php')
+    include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Templates/Colas/cola.php')
     ?>

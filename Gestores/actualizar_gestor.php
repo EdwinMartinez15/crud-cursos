@@ -11,7 +11,7 @@
     $gestor=new Gestor();
     $gestor=$crudG->obtenerGestor($_GET['id']);
     $listaGestores=$crudG->mostrar();
-    include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/cabeza_gestor.php');
+    include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Templates/Cabezas/cabeza_administrador.php');
 ?>
 <div class="container position-fixed top-50 start-50 translate-middle w-auto p-3">
     <div class="row justify-content-center align-items-center g-2">
@@ -64,5 +64,5 @@
     </div>
 </div>
     <?php
-    include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/cola.php')
+    include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Templates/Colas/cola.php')
     ?>
