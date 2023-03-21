@@ -22,10 +22,10 @@
         if ($gestor['clave']==$_POST['clave']) {
             switch ($gestor['tipo_usuario']) {
                 case 'administrador':
-                    header('Location: /crud-cursos/Templates/PantallaAdministrador.php');
+                    header('Location: /crud-cursos/Templates/Pantallas/PantallaAdministrador.php');
                     break;
                 case 'gestor':
-                    header('Location: /crud-cursos/Templates/PantallaGestor.php');
+                    header('Location: /crud-cursos/Templates/Pantallas/PantallaGestor.php');
                     break;
                 
                 default:
