@@ -3,9 +3,13 @@
         private $id;
         private $nombres;
         private $apellidos;
+        private $documento;
         private $correo;
         private $direccion;
         private $celular;
+        private $ultimo_estudio;
+        private $continua;
+        private $observacion;
         private $ciudad;
         private $curso_id;
         private $gestor_id;
@@ -30,6 +34,12 @@
         public function setApellidos($apellidos){
             $this->apellidos = $apellidos;
         }
+        public function getDocumento(){
+            return $this->documento;
+        }
+        public function setDocumento($documento){
+            $this->documento = $documento;
+        }
         public function getCorreo(){
             return $this->correo;
         }
@@ -47,6 +57,24 @@
         }
         public function setCelular($celular){
             $this->celular = $celular;
+        }
+        public function getUltimo_estudio(){
+            return $this->ultimo_estudio;
+        }
+        public function setUltimo_estudio($ultimo_estudio){
+            $this->ultimo_estudio = $ultimo_estudio;
+        }
+        public function getContinua(){
+            return $this->continua;
+        }
+        public function setContinua($continua){
+            $this->continua = $continua;
+        }
+        public function getObservacion(){
+            return $this->observacion;
+        }
+        public function setObservacion($observacion){
+            $this->observacion = $observacion;
         }
         public function getCiudad(){
             return $this->ciudad;

@@ -10,20 +10,21 @@
         $usuario->setNombres($_POST['nombres']);
         $usuario->setApellidos($_POST['apellidos']);
         $usuario->setCorreo($_POST['correo']);
-        $usuario->setDireccion($_POST['direccion']);
         $usuario->setCelular($_POST['celular']);
-        $usuario->setCiudad($_POST['ciudad']);
         $usuario->setCurso_id($_POST['curso_id']);
-        $usuario->setGestor_id($_POST['gestor_id']);
         $crud->insertar($usuario);
         header('Location: /crud-cursos/index.php');
     }elseif (isset($_POST['actualizar'])) {
         $usuario->setId($_POST['id']);
         $usuario->setNombres($_POST['nombres']);
         $usuario->setApellidos($_POST['apellidos']);
+        $usuario->setDocumento($_POST['documento']);
         $usuario->setCorreo($_POST['correo']);
         $usuario->setDireccion($_POST['direccion']);
         $usuario->setCelular($_POST['celular']);
+        $usuario->setUltimo_estudio($_POST['ultimo_estudio']);
+        $usuario->setContinua($_POST['continua']);
+        $usuario->setObservacion($_POST['observacion']);
         $usuario->setCiudad($_POST['ciudad']);
         $usuario->setCurso_id($_POST['curso_id']);
         $usuario->setGestor_id($_POST['gestor_id']);

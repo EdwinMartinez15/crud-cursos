@@ -33,16 +33,8 @@
                                 <input type="text"class="form-control" name="correo">
                         </div>
                         <div class="mb-3">
-                            <label for="" class="form-label">Direccion</label>
-                                <input type="text"class="form-control" name="direccion">
-                        </div>
-                        <div class="mb-3">
                             <label for="" class="form-label">Celular</label>
                                 <input type="text"class="form-control" name="celular">
-                        </div>
-                        <div class="mb-3">
-                            <label for="" class="form-label">Ciudad</label>
-                                <input type="text"class="form-control" name="ciudad">
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Curso</label>

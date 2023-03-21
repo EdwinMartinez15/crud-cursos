@@ -33,13 +33,18 @@ CREATE TABLE usuarios(
     id int(4) not null,
     nombres varchar(20) not null,
     apellidos varchar(20) not null,
+    documento int(11),
     correo varchar(30) not null,
-    direccion varchar(30) not null,
+    direccion varchar(30),
     celular int(12) not null,
-    ciudad varchar(20) not null,
+    ultimo_estudio VARCHAR(30),
+    continua boolean,
+    observacion text(500),
+    ciudad varchar(20),
     curso_id int(4) not null,
     gestor_id int(4)
 );
+
 ALTER TABLE usuarios
     ADD PRIMARY KEY (id);
 

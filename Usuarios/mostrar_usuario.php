@@ -21,7 +21,7 @@
     include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/cabeza_administrador.php')
 
 ?>
-<div class="container position-fixed top-50 start-50 translate-middle w-auto p-3">
+<div class="scrolling-wrapper position-fixed top-50 start-50 translate-middle w-auto p-3">
     <div class="row justify-content-center align-items-center g-2">
         <div class="col-md-12">
             <div class="card">
@@ -29,14 +29,18 @@
                     Tabla Usuarios <?php echo $nombre ?>
                 </div>
                 <div class="card-body ">
-                    <table class="table text-center">
+                    <table class="table text-center" style="width:100%">
                         <thead>
                             <th>Id</th>
                             <th>Nombre</th>
                             <th>Apellidos</th>
+                            <th>Documento</th>
                             <th>Correo</th>
                             <th>Direccion</th>
                             <th>Celular</th>
+                            <th>Ultimo estudio</th>
+                            <th>Continua</th>
+                            <th>Observacion</th>
                             <th>Ciudad</th>
                             <th>Curso_id</th>
                             <?php if($tipo=='administrador'){?>
@@ -54,9 +58,13 @@
                                         <td><?php echo $usuario->getId() ?></td>
                                         <td><?php echo $usuario->getNombres() ?></td>
                                         <td><?php echo $usuario->getApellidos() ?></td>
+                                        <td><?php echo $usuario->getDocumento() ?></td>
                                         <td><?php echo $usuario->getCorreo() ?></td>
                                         <td><?php echo $usuario->getDireccion() ?></td>
                                         <td><?php echo $usuario->getCelular() ?></td>
+                                        <td><?php echo $usuario->getUltimo_estudio() ?></td>
+                                        <td><?php echo $usuario->getContinua() ?></td>
+                                        <td><?php echo $usuario->getObservacion() ?></td>
                                         <td><?php echo $usuario->getCiudad() ?></td>
                                         <td><?php 
                                             foreach ($listaCursos as $curso) {?>
@@ -81,9 +89,13 @@
                                         <td><?php echo $usuario->getId() ?></td>
                                         <td><?php echo $usuario->getNombres() ?></td>
                                         <td><?php echo $usuario->getApellidos() ?></td>
+                                        <td><?php echo $usuario->getDocumento() ?></td>
                                         <td><?php echo $usuario->getCorreo() ?></td>
                                         <td><?php echo $usuario->getDireccion() ?></td>
                                         <td><?php echo $usuario->getCelular() ?></td>
+                                        <td><?php echo $usuario->getUltimo_estudio() ?></td>
+                                        <td><?php echo $usuario->getContinua() ?></td>
+                                        <td><?php echo $usuario->getObservacion() ?></td>
                                         <td><?php echo $usuario->getCiudad() ?></td>
                                         <td><?php 
                                             foreach ($listaCursos as $curso) {?>

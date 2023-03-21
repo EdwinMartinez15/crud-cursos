@@ -42,6 +42,10 @@
                                 <input type="text"class="form-control" name="apellidos" value="<?php echo $usuario->getApellidos()?>">
                         </div>
                         <div class="mb-3">
+                            <label for="" class="form-label">Documento</label>
+                                <input type="text"class="form-control" name="documento" value="<?php echo $usuario->getDocumento()?>">
+                        </div>
+                        <div class="mb-3">
                             <label for="" class="form-label">Correo</label>
                                 <input type="text"class="form-control" name="correo" value="<?php echo $usuario->getCorreo()?>">
                         </div>
@@ -54,23 +58,35 @@
                                 <input type="text"class="form-control" name="celular" value="<?php echo $usuario->getCelular()?>">
                         </div>
                         <div class="mb-3">
+                            <label for="" class="form-label">Ultimo estudio</label>
+                                <input type="text"class="form-control" name="ultimo_estudio" value="<?php echo $usuario->getUltimo_estudio()?>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Continua</label>
+                                <input type="text"class="form-control" name="continua" value="<?php echo $usuario->getContinua()?>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Observación</label>
+                                <input type="text"class="form-control" name="observacion" value="<?php echo $usuario->getObservacion()?>">
+                        </div>
+                        <div class="mb-3">
                             <label for="" class="form-label">Ciudad</label>
-                                <input type="text"class="form-control" name="ciudad" value="<?php echo $usuario->getCiudad()?>">
+                            <input type="text"class="form-control" name="ciudad" value="<?php echo $usuario->getCiudad()?>">
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Curso</label>
-                                <select type="text"class="form-select" name="curso_id" value="<?php echo $usuario->getCurso_id()?>">
+                            <select type="text"class="form-select" name="curso_id" value="<?php echo $usuario->getCurso_id()?>">
                                 <?php foreach ($listaCursos as $curso) {?>
                                     <?php if ($curso->getId()==$usuario->getCurso_id()) {?>
                                         <option selected value=<?php echo $curso->getId() ?>> <?php echo $curso->getNombre() ?></option>
-                                    <?php }
+                                        <?php }
                                     ?>
                                     <?php if ($curso->getId()!=$usuario->getCurso_id()) {?>
                                         <option value=<?php echo $curso->getId() ?>> <?php echo $curso->getNombre() ?></option>
-                                    <?php }
+                                        <?php }
                                     ?>
                                 <?php }?>   
-                                </select>
+                            </select>
                         </div>
                         <div class="mb-3">
                             <?php if ($tipo=='gestor') {?>
@@ -79,31 +95,31 @@
                                     <?php }?>
                                     <?php if ($tipo=='administrador') {?>
                                         <label for="" class="form-label">Gestor</label>
-                                    <select type="text"class="form-select" name="gestor_id" value="<?php echo $usuario->getGestor_id()?>">
-                                <?php }?>
-                                    <?php if ($usuario->getGestor_id()==NULL) {?>
-                                        <option selected value="" disabled>Seleccione un gestor</option>
-                                    <?php }?>
-                                    <?php foreach ($listaGestores as $gestor) {?>
-                                        <?php if ($gestor->getTipo_usuario()=='gestor'){?>
-                                            <?php if ($gestor->getId()==$usuario->getGestor_id()) {?>
-                                                <option selected value=<?php echo $gestor->getId() ?>> <?php echo $gestor->getNombre() ?></option>
+                                        <select type="text"class="form-select" name="gestor_id" value="<?php echo $usuario->getGestor_id()?>">
                                             <?php }?>
-                                            <?php if ($gestor->getId()!=$usuario->getGestor_id()) {?>
-                                                <option value=<?php echo $gestor->getId() ?>> <?php echo $gestor->getNombre() ?></option>
-                                            <?php }?>
-                                        <?php }?> 
-                                    <?php }?>   
-                                </select>
-                        </div>
-                        <input type="hidden" name="actualizar" value="actualizar">
-                        <input type="submit" value="Guardar" class="btn btn-success">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    <?php
+                                            <?php if ($usuario->getGestor_id()==NULL) {?>
+                                                <option selected value="" disabled>Seleccione un gestor</option>
+                                                <?php }?>
+                                                <?php foreach ($listaGestores as $gestor) {?>
+                                                    <?php if ($gestor->getTipo_usuario()=='gestor'){?>
+                                                        <?php if ($gestor->getId()==$usuario->getGestor_id()) {?>
+                                                            <option selected value=<?php echo $gestor->getId() ?>> <?php echo $gestor->getNombre() ?></option>
+                                                            <?php }?>
+                                                            <?php if ($gestor->getId()!=$usuario->getGestor_id()) {?>
+                                                                <option value=<?php echo $gestor->getId() ?>> <?php echo $gestor->getNombre() ?></option>
+                                                                <?php }?>
+                                                                <?php }?> 
+                                                                <?php }?>   
+                                                            </select>
+                                                        </div>
+                                                        <input type="hidden" name="actualizar" value="actualizar">
+                                                        <input type="submit" value="Guardar" class="btn btn-success">
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php
     include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/cola.php')
     ?>
