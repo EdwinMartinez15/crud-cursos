@@ -29,6 +29,10 @@
                                 <input type="text"class="form-control" name="apellidos">
                         </div>
                         <div class="mb-3">
+                            <label for="" class="form-label">Documento</label>
+                                <input type="text"class="form-control" name="documento">
+                        </div>
+                        <div class="mb-3">
                             <label for="" class="form-label">Correo</label>
                                 <input type="text"class="form-control" name="correo">
                         </div>

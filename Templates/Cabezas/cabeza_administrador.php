@@ -24,6 +24,10 @@
                                 <td>
                                     <a href="/crud-cursos/Cursos/mostrar_curso.php" class="btn btn-primary">Cursos</a>
                                 </td>
+                                <td>
+                                    <a href="/crud-cursos/Templates/Pantallas/PantallaReportes.php" class="btn btn-primary">Reportes
+                                    </a>
+                                </td>
                             <?php ;}?>
                         </tr>
                     </table>
@@ -38,7 +42,7 @@
                                 <a href="/crud-cursos/Templates/PantallaGestor.php" class="btn btn-info">Volver al inicio</a>
                             <?php }?>
                             <?php if ($tipo=='administrador') {?>
-                                <a href="/crud-cursos/Templates/PantallaAdministrador.php" class="btn btn-info">Volver al inicio</a>
+                                <a href="/crud-cursos/Templates/Pantallas/PantallaAdministrador.php" class="btn btn-info">Volver al inicio</a>
                             <?php }?>
                         </td>
                         <td>

@@ -24,9 +24,13 @@ $listaCursos=$crudC->mostrar();
                             <th>Id</th>
                             <th>Nombre</th>
                             <th>Apellidos</th>
+                            <th>Documento</th>
                             <th>Correo</th>
                             <th>Direccion</th>
                             <th>Celular</th>
+                            <th>Ultimo estudio</th>
+                            <th>Continua</th>
+                            <th>Observacion</th>
                             <th>Ciudad</th>
                             <th>Curso_id</th>
                             <th>Gestor_id</th>
