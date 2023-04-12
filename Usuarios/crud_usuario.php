@@ -88,6 +88,13 @@
             $actualizar->bindValue('gestor_id',$usuario->getGestor_id());
             $actualizar->execute();
         }
+        public function actualizarGestor($usuario){
+            $db=DB::conectar();
+            $actualizar=$db->prepare('UPDATE usuarios SET gestor_id=:gestor_id WHERE id=:id');
+            $actualizar->bindValue('id',$usuario->getId());
+            $actualizar->bindValue('gestor_id',$usuario->getGestor_id());
+            $actualizar->execute();
+        }
     }
 
 

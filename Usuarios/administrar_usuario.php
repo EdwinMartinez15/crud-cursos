@@ -30,6 +30,15 @@
         $usuario->setGestor_id($_POST['gestor_id']);
         $crud->actualizar($usuario);
         header('Location: /crud-cursos/Usuarios/mostrar_usuario.php');
+    }elseif (isset($_POST['actualizarM'])) {
+        $idUsuario=$_POST['idUsuario'];
+        for($i=0;$i<count($idUsuario);$i++)
+        {
+            $usuario->setId($idUsuario[$i]);
+            $usuario->setGestor_id($_POST['gestor_id']);
+            $crud->actualizarGestor($usuario);
+        }
+        header('Location: /crud-cursos/Usuarios/mostrar_usuario.php');
     }elseif ($_GET['accion']=='e') {
         $crud->eliminar($_GET['id']);
         header('Location: /crud-cursos/Usuarios/mostrar_usuario.php');

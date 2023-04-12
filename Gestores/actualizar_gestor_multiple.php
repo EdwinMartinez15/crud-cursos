@@ -28,17 +28,21 @@
                     Seleccione los usuarios que desea asignar:
                 </div>
                 <div class="card-body">
-                <form action="/crud-cursos/Reportes/administrarGestor.php" method="post">
+                <form action="/crud-cursos/Usuarios/administrar_usuario.php" method="post">
                     <div class="mb-3">
+                        <div class="mb-3">
+                            <label for="" class="form-label">Nombre Gestor</label>
+                                <input disabled  type="text"class="form-control" name="gestor_id" value="<?php echo $gestor->getNombre()?>">
+                        </div>
                         <label for="" class="form-label">Usuario(s)</label>
-                        <select multiple type="text"class="form-select" name="idUsuario[]" value="<?php echo $usuario->getNombres()?>">
+                        <select multiple type="text"class="form-select" name="idUsuario[]" value="<?php echo $usuario->getId()?>">
                                 <?php foreach ($listaUsuarios as $usuario) {?>
                                         <option value=<?php echo $usuario->getId() ?>> <?php echo $usuario->getNombres() ?></option>
                                     ?>
                                 <?php }?>   
                         </select>
                     </div>
-                    <input type="hidden" name="actualizar_multiple" value="actualizar_multiple">
+                    <input type="hidden" name="actualizarM" value="actualizarM">
                     <input type="submit" value="Asignar" class="btn btn-success">
                 </form>
                 </div>
