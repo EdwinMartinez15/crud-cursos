@@ -28,6 +28,7 @@
                             <th>Tipo Usuario</th>
                             <th>Usuario</th>
                             <th>Clave</th>
+                            <th>Elegir usuarios</th>
                             <th>Actualizar</th>
                             <th>Eliminar</th>
                         </thead>
@@ -39,6 +40,7 @@
                                 <td><?php echo $gestor->getTipo_Usuario() ?></td>
                                 <td><?php echo $gestor->getUsuario() ?></td>
                                 <td><?php echo $gestor->getClave() ?></td>
+                                <td><a href="/crud-cursos/Gestores/actualizar_gestor_multiple.php" class="btn btn-primary">Usuarios</a></td>
                                 <td><a href="/crud-cursos/Gestores/actualizar_gestor.php?id=<?php echo $gestor->getId()?>&accion=a" class="btn btn-primary">Actualizar</a></td>
                                 <td><a href="/crud-cursos/Gestores/administrar_gestor.php?id=<?php echo $gestor->getId()?>&accion=e" class="btn btn-danger">Eliminar</a></td>
                             </tr>

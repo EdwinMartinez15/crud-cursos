@@ -51,17 +51,23 @@
                 <form action="/crud-cursos/Reportes/administrarReportes.php" method="post">
                     <div class="mb-3">
                         <label for="" class="form-label">Reporte por gestor</label>
-                            <input type="text"class="form-control" name="nombres">
+                        <select type="text"class="form-select" name="curso_id" value="<?php echo $usuario->getCurso_id()?>">
+                                    <option value="" disabled selected>Seleccione su gestor</option>
+                                <?php foreach ($listaGestores as $gestor) {?>
+                                        <option value=<?php echo $gestor->getId() ?>> <?php echo $gestor->getNombre() ?></option>
+                                    ?>
+                                <?php }?>   
+                        </select>
                     </div>
-                    <input type="hidden" name="gestor" value="gestor">
+                    <input type="hidden" name="curso" value="curso">
                     <input type="submit" value="Generar reporte" class="btn btn-success">
                 </form>
                 <form action="/crud-cursos/Reportes/administrarReportes.php" method="post">
                     <div class="mb-3">
-                        <label for="" class="form-label">Reporte no se</label>
-                            <input type="text"class="form-control" name="nombres">
+                        <label for="" class="form-label">Reporte de usuarios por gestor</label>
+                        
                     </div>
-                    <input type="hidden" name="insertar" value="insertar">
+                    <input type="hidden" name="gestorUsuarios" value="gestorUsuarios">
                     <input type="submit" value="Generar reporte" class="btn btn-success">
                 </form>
             </div>  

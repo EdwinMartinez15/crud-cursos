@@ -13,7 +13,7 @@
             $insert->bindValue('celular',$usuario->getCelular());
             $insert->bindValue('ultimo_estudio',$usuario->getUltimo_estudio());
             $insert->bindValue('continua',$usuario->getContinua());
-            $insert->bindValue('observaciones',$usuario->getObservaciones());
+            $insert->bindValue('observaciones',$usuario->getObservacion());
             $insert->bindValue('ciudad',$usuario->getCiudad());
             $insert->bindValue('curso_id',$usuario->getCurso_id());
             $insert->bindValue('gestor_id',$usuario->getGestor_id());

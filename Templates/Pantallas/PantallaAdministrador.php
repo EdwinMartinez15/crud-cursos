@@ -32,7 +32,7 @@
                         <a href="/crud-cursos/Usuarios/mostrar_usuario.php" class="btn btn-primary">Ver usuarios inscritos</a>
                         <a href="/crud-cursos/Gestores/mostrar_gestor.php" class="btn btn-primary">Ver Gestores inscritos </a>
                         <a href="/crud-cursos/Cursos/mostrar_curso.php" class="btn btn-primary">Ver Cursos inscritos  </a>
-                        <a href="/crud-cursos/Templates/Pantallas/PantallaReportes.php" class="btn btn-primary">Ver Reportes  </a>
+                        <a href="/crud-cursos/Templates/PantallaReportes.php" class="btn btn-primary">Ver Reportes  </a>
                     </div>
                     
                 </div>

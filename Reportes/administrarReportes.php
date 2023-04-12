@@ -19,6 +19,9 @@
     $listaCursos=$crudC->mostrar();
 
 
+
+    $conteoUsuarios=0;
+
     $crud = new CrudUsuario();
     $usuario = new Usuario();
 ?>
@@ -155,6 +158,26 @@
                                         </tr>
                                     <?php }?>
                                 <?php }?>
+                        </body>
+                    </table>
+    <?php }?>
+    <?php if (isset($_POST['gestorUsuarios'])) {?>
+        <table class="table text-center">
+                        <thead>
+                            <th>Nombre</th>
+                            <th>Cantidad de usuarios</th>
+                        </thead>
+                        <body>
+                            <?php foreach ($listaGestores as $gestor){?>
+                                <tr>
+                                    <td><?php echo $gestor->getNombre() ?></td>
+                                    <?php foreach ($listaUsuarios as $usuario) {?>
+                                        <?php if($usuario->getGestor_id()==$gestor->getId()){$conteoUsuarios++; }?>
+                                        <?php }?>
+                                        
+                                    <td><?php echo $conteoUsuarios ?></td>
+                                    </tr>
+                            <?php }?>
                         </body>
                     </table>
     <?php }?>

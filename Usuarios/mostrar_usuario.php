@@ -114,9 +114,6 @@
                     </table>
                 </div>
                 <div class="card-footer text-end">
-                    <a href="/crud-cursos/Reportes/excelUsuarios.php" class="btn btn-primary ">Generar reporte de todos</a>
-                    <a href="/crud-cursos/Reportes/excelCursos.php" class="btn btn-primary ">Generar reporte por cursos</a>
-                    <a href="/crud-cursos/Reportes/excelGestor.php" class="btn btn-primary ">Generar reporte por gestor</a>
                 </div>
             </div>
         </div>
