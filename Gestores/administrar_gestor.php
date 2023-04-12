@@ -21,6 +21,14 @@
         $gestor->setClave($_POST['clave']);
         $crud->actualizar($gestor);
         header('Location: /crud-cursos/Gestores/mostrar_gestor.php');
+    }elseif (isset($_POST['actualizar_multiple'])) {
+        $gestor->setId($_POST['id']);
+        $gestor->setNombre($_POST['nombre']);
+        $gestor->setTipo_usuario($_POST['tipo_usuario']);
+        $gestor->setUsuario($_POST['usuario']);
+        $gestor->setClave($_POST['clave']);
+        $crud->actualizar($gestor);
+        header('Location: /crud-cursos/Gestores/mostrar_gestor.php');
     }elseif ($_GET['accion']=='e') {
         $crud->eliminar($_GET['id']);
         header('Location: /crud-cursos/Gestores/mostrar_gestor.php');

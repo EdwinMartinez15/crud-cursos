@@ -31,7 +31,7 @@
                 <form action="/crud-cursos/Reportes/administrarGestor.php" method="post">
                     <div class="mb-3">
                         <label for="" class="form-label">Usuario(s)</label>
-                        <select multiple type="text"class="form-select" name="curso_id" value="<?php echo $usuario->getNombres()?>">
+                        <select multiple type="text"class="form-select" name="idUsuario[]" value="<?php echo $usuario->getNombres()?>">
                                 <?php foreach ($listaUsuarios as $usuario) {?>
                                         <option value=<?php echo $usuario->getId() ?>> <?php echo $usuario->getNombres() ?></option>
                                     ?>
