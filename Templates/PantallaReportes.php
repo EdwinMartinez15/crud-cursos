@@ -3,23 +3,23 @@
     $tipo=$_SESSION['Tipo'];
     $id=$_SESSION['Id'];
     
-    require_once('../../Usuarios/crud_usuario.php');
-    require_once('../../Usuarios/usuario.php');
+    require_once('../Usuarios/crud_usuario.php');
+    require_once('../Usuarios/usuario.php');
     $crudU=new CrudUsuario();
     $usuario=new Usuario();
     $listaUsuarios=$crudU->mostrar();
-    require_once('../../Gestores/crud_gestor.php');
-    require_once('../../Gestores/gestor.php');
+    require_once('../Gestores/crud_gestor.php');
+    require_once('../Gestores/gestor.php');
     $crudG=new CrudGestor();
     $gestor=new Gestor();
     $listaGestores=$crudG->mostrar();
-    require_once('../../Cursos/crud_curso.php');
-    require_once('../../Cursos/curso.php');
+    require_once('../Cursos/crud_curso.php');
+    require_once('../Cursos/curso.php');
     $crudC=new CrudCurso();
     $curso=new Curso();
     $listaCursos=$crudC->mostrar();
 
-    include('../Cabezas/cabeza_administrador.php')
+    include('Cabezas/cabeza_administrador.php')
 
 ?>
         <div class="container position-fixed top-50 start-50 translate-middle fs-1">

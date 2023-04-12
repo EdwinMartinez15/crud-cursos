@@ -25,7 +25,7 @@
                                     <a href="/crud-cursos/Cursos/mostrar_curso.php" class="btn btn-primary">Cursos</a>
                                 </td>
                                 <td>
-                                    <a href="/crud-cursos/Templates/Pantallas/PantallaReportes.php" class="btn btn-primary">Reportes
+                                    <a href="/crud-cursos/Templates/PantallaReportes.php" class="btn btn-primary">Reportes
                                     </a>
                                 </td>
                             <?php ;}?>
