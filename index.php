@@ -22,5 +22,5 @@
             </div>  
         </div>
     <?php
-    include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/cola.php')
+    include('Templates/Colas/cola.php')
     ?>

@@ -5,12 +5,12 @@
         echo 'No tiene permiso';
         die();
     }
-    require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Cursos/crud_curso.php');
-    require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Cursos/curso.php');
+    require_once('../Cursos/crud_curso.php');
+    require_once('../Cursos/curso.php');
     $crud=new CrudCurso();
     $curso=new Curso();
     $listaCursos=$crud->mostrar();
-    include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Templates/Cabezas/cabeza_administrador.php')
+    include('../Templates/Cabezas/cabeza_administrador.php')
 ?>
 <div class="container position-fixed top-50 start-50 translate-middle w-auto p-3">
     <div class="row justify-content-center align-items-center g-2">
@@ -52,5 +52,5 @@
 
     </body>
     <?php
-    include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Templates/Colas/cola.php')
+    include('../Templates/Colas/cola.php')
     ?>

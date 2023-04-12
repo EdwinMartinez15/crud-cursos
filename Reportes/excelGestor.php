@@ -3,18 +3,18 @@
 header("Content-Type: application/xls");
 header("Content-Disposition: attachment; filename=Reporte_". date('Y:m:d:g:i:s').".xls");
 
-require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Usuarios/crud_usuario.php');
-require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Usuarios/usuario.php');
+require_once('../Usuarios/crud_usuario.php');
+require_once('../Usuarios/usuario.php');
 $crudU=new CrudUsuario();
 $usuario=new Usuario();
 $listaUsuarios=$crudU->mostrar();
-require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Gestores/crud_gestor.php');
-require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Gestores/gestor.php');
+require_once('../Gestores/crud_gestor.php');
+require_once('../Gestores/gestor.php');
 $crudG=new CrudGestor();
 $gestor=new Gestor();
 $listaGestores=$crudG->mostrar();
-require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Cursos/crud_curso.php');
-require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Cursos/curso.php');
+require_once('../Cursos/crud_curso.php');
+require_once('../Cursos/curso.php');
 $crudC=new CrudCurso();
 $curso=new Curso();
 $listaCursos=$crudC->mostrar();

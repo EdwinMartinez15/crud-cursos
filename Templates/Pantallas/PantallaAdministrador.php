@@ -39,5 +39,5 @@
             </div>  
         </div>
     <?php
-    include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/cola.php')
+    include('../Colas/cola.php')
     ?>

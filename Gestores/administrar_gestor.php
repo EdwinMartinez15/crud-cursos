@@ -1,6 +1,6 @@
 <?php
-    require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Gestores/crud_gestor.php');
-    require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Gestores/gestor.php');
+    require_once('../Gestores/crud_gestor.php');
+    require_once('../Gestores/gestor.php');
 
 
     $crud = new CrudGestor();

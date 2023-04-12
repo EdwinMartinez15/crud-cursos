@@ -1,10 +1,10 @@
 <?php
     session_start();
     
-    require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Login/login.php');
+    require_once('../Login/login.php');
     
-    require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Gestores/crud_gestor.php');
-    require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Gestores/gestor.php');
+    require_once('../Gestores/crud_gestor.php');
+    require_once('../Gestores/gestor.php');
     
     $crudG = new CrudGestor();
     $gestor = new Gestor();

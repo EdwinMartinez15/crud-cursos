@@ -1,5 +1,5 @@
 <?php
-    require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/conexion.php');
+    require_once('../conexion.php');
     class CrudUsuario{
         public function __construct(){}
         public function insertar($usuario){

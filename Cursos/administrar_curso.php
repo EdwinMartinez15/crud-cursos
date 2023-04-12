@@ -1,6 +1,6 @@
 <?php
-    require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Cursos/crud_curso.php');
-    require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Cursos/curso.php');
+    require_once('../Cursos/crud_curso.php');
+    require_once('../Cursos/curso.php');
 
 
     $crud = new CrudCurso();

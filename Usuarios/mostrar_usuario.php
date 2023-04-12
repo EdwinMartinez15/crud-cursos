@@ -3,22 +3,22 @@
     $tipo=$_SESSION['Tipo'];
     $id=$_SESSION['Id'];
     
-    require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Usuarios/crud_usuario.php');
-    require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Usuarios/usuario.php');
+    require_once('../Usuarios/crud_usuario.php');
+    require_once('../Usuarios/usuario.php');
     $crudU=new CrudUsuario();
     $usuario=new Usuario();
     $listaUsuarios=$crudU->mostrar();
-    require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Gestores/crud_gestor.php');
-    require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Gestores/gestor.php');
+    require_once('../Gestores/crud_gestor.php');
+    require_once('../Gestores/gestor.php');
     $crudG=new CrudGestor();
     $gestor=new Gestor();
     $listaGestores=$crudG->mostrar();
-    require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Cursos/crud_curso.php');
-    require_once('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Cursos/curso.php');
+    require_once('../Cursos/crud_curso.php');
+    require_once('../Cursos/curso.php');
     $crudC=new CrudCurso();
     $curso=new Curso();
     $listaCursos=$crudC->mostrar();
-    include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Templates/Cabezas/cabeza_administrador.php')
+    include('../Templates/Cabezas/cabeza_administrador.php')
 
 ?>
 <div class="scrolling-wrapper position-fixed top-50 start-50 translate-middle w-auto p-3">
@@ -125,5 +125,5 @@
 
 
     <?php
-    include('/Applications/XAMPP/xamppfiles/htdocs/crud-cursos/Templates/Colas/cola.php')
+    include('../Templates/Colas/cola.php')
     ?>

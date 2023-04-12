@@ -39,7 +39,7 @@
                     <table>
                         <td>
                             <?php if ($tipo=='gestor') {?>
-                                <a href="/crud-cursos/Templates/PantallaGestor.php" class="btn btn-info">Volver al inicio</a>
+                                <a href="/crud-cursos/Templates/Pantallas/PantallaGestor.php" class="btn btn-info">Volver al inicio</a>
                             <?php }?>
                             <?php if ($tipo=='administrador') {?>
                                 <a href="/crud-cursos/Templates/Pantallas/PantallaAdministrador.php" class="btn btn-info">Volver al inicio</a>
