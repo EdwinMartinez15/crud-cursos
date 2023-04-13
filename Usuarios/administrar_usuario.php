@@ -9,9 +9,16 @@
     if (isset($_POST['insertar'])) {
         $usuario->setNombres($_POST['nombres']);
         $usuario->setApellidos($_POST['apellidos']);
+        $usuario->setDocumento($_POST['documento']);
         $usuario->setCorreo($_POST['correo']);
         $usuario->setCelular($_POST['celular']);
         $usuario->setCurso_id($_POST['curso_id']);
+        $usuario->setDireccion(null);
+        $usuario->setUltimo_estudio(null);
+        $usuario->setContinua(null);
+        $usuario->setObservacion(null);
+        $usuario->setCiudad(null);
+        $usuario->setGestor_id(null);
         $crud->insertar($usuario);
         header('Location: /crud-cursos/index.php');
     }elseif (isset($_POST['actualizar'])) {
@@ -32,11 +39,14 @@
         header('Location: /crud-cursos/Usuarios/mostrar_usuario.php');
     }elseif (isset($_POST['actualizarM'])) {
         $idUsuario=$_POST['idUsuario'];
+        $gestorID=$_POST['idGestor'];
         for($i=0;$i<count($idUsuario);$i++)
         {
-            $usuario->setId($idUsuario[$i]);
-            $usuario->setGestor_id($_POST['gestor_id']);
-            $crud->actualizarGestor($usuario);
+            if ($idUsuario[$i]) {
+                $usuario->setId($idUsuario[$i]);
+                $usuario->setGestor_id($gestorID);
+                $crud->actualizarGestor($usuario);
+            }
         }
         header('Location: /crud-cursos/Usuarios/mostrar_usuario.php');
     }elseif ($_GET['accion']=='e') {

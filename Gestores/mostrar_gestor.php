@@ -40,7 +40,13 @@
                                 <td><?php echo $gestor->getTipo_Usuario() ?></td>
                                 <td><?php echo $gestor->getUsuario() ?></td>
                                 <td><?php echo $gestor->getClave() ?></td>
-                                <td><a href="/crud-cursos/Gestores/actualizar_gestor_multiple.php?id=<?php echo $gestor->getId()?>" class="btn btn-primary">Usuarios</a></td>
+                                <?php if ($gestor->getTipo_Usuario()=='gestor'){?>
+                                    <td><a href="/crud-cursos/Gestores/actualizar_gestor_multiple.php?id=<?php echo $gestor->getId()?>" class="btn btn-primary">Usuarios</a></td>
+                                <?php }?>
+                                <?php if ($gestor->getTipo_Usuario()!='gestor'){?>
+                                    <td><a href="" class="btn btn-danger">Boton desabilitado</a></td>
+                                <?php }?>
+                                
                                 <td><a href="/crud-cursos/Gestores/actualizar_gestor.php?id=<?php echo $gestor->getId()?>&accion=a" class="btn btn-primary">Actualizar</a></td>
                                 <td><a href="/crud-cursos/Gestores/administrar_gestor.php?id=<?php echo $gestor->getId()?>&accion=e" class="btn btn-danger">Eliminar</a></td>
                             </tr>

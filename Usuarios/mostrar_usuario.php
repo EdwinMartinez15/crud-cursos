@@ -63,7 +63,11 @@
                                         <td><?php echo $usuario->getDireccion() ?></td>
                                         <td><?php echo $usuario->getCelular() ?></td>
                                         <td><?php echo $usuario->getUltimo_estudio() ?></td>
-                                        <td><?php echo $usuario->getContinua() ?></td>
+                                        <td><?php 
+                                            if($usuario->getContinua()==null){ echo '';}
+                                            if($usuario->getContinua()==1){ echo 'Si';}
+                                            if($usuario->getContinua()==2){ echo 'No';}
+                                            ?></td>
                                         <td><?php echo $usuario->getObservacion() ?></td>
                                         <td><?php echo $usuario->getCiudad() ?></td>
                                         <td><?php 
