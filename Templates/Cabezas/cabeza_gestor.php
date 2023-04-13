@@ -16,7 +16,6 @@
                         </td>
                     </tr>
                 </table>
-                <a href="/crud-cursos/index.php" class="btn btn-info">Volver al inicio</a>
             </header>
         </div>
         <main>

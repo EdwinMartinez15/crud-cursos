@@ -10,6 +10,7 @@
     $crudG=new CrudGestor();
     $gestor=new Gestor();
     $listaGestores=$crudG->mostrar();
+    include('../Templates/Cabezas/cabeza_administrador.php');
     include('../Templates/Cabezas/cabeza_gestor.php');
 ?>
 <div class="container position-fixed top-50 start-50 translate-middle w-50 p-3">
