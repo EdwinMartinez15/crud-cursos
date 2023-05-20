@@ -1,8 +1,16 @@
 
 <?php
-session_start();
-$tipo = $_SESSION['Tipo'];
-$id = $_SESSION['Id'];
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+    $tipo=$_SESSION['Tipo'];
+    $id=$_SESSION['Id'];
+    $nombre=$_SESSION['Nombre'];
+    if($tipo!='administrador'){
+        echo 'No tiene permiso';
+        die();
+    }
+}
+
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Conexión a la base de datos
