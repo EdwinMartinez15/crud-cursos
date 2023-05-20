@@ -53,10 +53,9 @@ if (session_status() === PHP_SESSION_NONE) {
                 </div>
                 <div class="row row-cols-2 justify-content-md-center">
                     <div class="btn-group">
-                        <a href="/crud-cursos/Productos/mostrar_producto.php" class="btn btn-primary">Ver Productos</a>
-                        <a href="/crud-cursos/Gestores/mostrar_gestor.php" class="btn btn-primary">Ver Gestores </a>
-                        <a href="/crud-cursos/Templates/Pantallas/Asignacion_mesas.php" class="btn btn-primary">Ver mesas </a>
-                        <a href="/crud-cursos/Templates/Pantallas/Reportes.php" class="btn btn-primary">Ver Reportes  </a>
+                        
+                        <a href="/crud-cursos/Templates/Pantallas/generar_reporte2.php" class="btn btn-primary">Inventario </a>
+                        <a href="/crud-cursos/Templates/Pantallas/generar_reporte1.php" class="btn btn-primary">Ventas </a>
                     </div>
                     
                 </div>

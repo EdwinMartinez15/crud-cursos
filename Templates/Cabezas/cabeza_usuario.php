@@ -9,7 +9,7 @@
                     <table>
                     <tr>
                         <td>
-                            <a href="/crud-cursos/index.php" class="btn btn-info">Volver al inicio</a>
+                            <a href="/crud-cursos/Usuarios/mostrar_usuario.php" class="btn btn-info">Volver </a>
                         </td>
                     </tr>
                 </table>

@@ -1,16 +1,10 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
     session_start();
     $tipo=$_SESSION['Tipo'];
-    $id=$_SESSION['Id'];
-    $nombre=$_SESSION['Nombre'];
-    if($tipo!='administrador'){
+    if($tipo!='cajero'){
         echo 'No tiene permiso';
         die();
     }
-}
-
-
 ?>
         <style>
             body {
@@ -35,7 +29,7 @@ if (session_status() === PHP_SESSION_NONE) {
         </style>
 <html>
     <head>
-        <title>Administrar</title>
+        <title>Administrar Libro</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <div class="position-absolute top-0 end-0">
                     <table>
@@ -48,15 +42,13 @@ if (session_status() === PHP_SESSION_NONE) {
     <body>
         <div class="container position-fixed top-50 start-50 translate-middle fs-1">
             <div class="row justify-content-md-center">
-                <div class="col col-lg-3 fs-1">
-                   Administrador
+                <div class="col col-lg-2 fs-1">
+                   Cajero
                 </div>
                 <div class="row row-cols-2 justify-content-md-center">
                     <div class="btn-group">
-                        <a href="/crud-cursos/Productos/mostrar_producto.php" class="btn btn-primary">Ver Productos</a>
-                        <a href="/crud-cursos/Gestores/mostrar_gestor.php" class="btn btn-primary">Ver Gestores </a>
-                        <a href="/crud-cursos/Templates/Pantallas/Asignacion_mesas.php" class="btn btn-primary">Ver mesas </a>
-                        <a href="/crud-cursos/Templates/Pantallas/Reportes.php" class="btn btn-primary">Ver Reportes  </a>
+                        <a href="/crud-cursos/Productos/mostrar_producto.php" class="btn btn-primary">Ingresar productos</a>
+                        
                     </div>
                     
                 </div>
